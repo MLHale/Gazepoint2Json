@@ -1,5 +1,5 @@
 # Gazepoint2Json
-This project time-synchronously integrates eye tracker data collected from a Gazepoint GP3 with an experimentation platform API, such as the Cybertrust phishing research platform.
+This project coverts and time-synchronously integrates eye tracker data collected from a Gazepoint GP3 with a JSON-based experimentation platform API, such as the Cybertrust phishing research platform.
 
 ## Hardware Requirements
 * Gazepoint GP3 HD (https://www.gazept.com/product-category/gp3-hd/)
@@ -10,6 +10,7 @@ This project time-synchronously integrates eye tracker data collected from a Gaz
 * python pip (https://pypi.python.org/pypi/pip)
 * lxml (https://pypi.python.org/pypi/lxml/3.4.4)
 * requests (http://docs.python-requests.org/en/master/)
+* ntplib for time Synchronization (https://pypi.python.org/pypi/ntplib/) 
 * PyOpenGaze (https://github.com/esdalmaijer/PyOpenGaze)
 
 ## Installation
@@ -33,7 +34,8 @@ Included in this project is an example script that works with the extended PyOpe
 The example code issues a GET POST request using the requests library every time a sample is recorded by PyOpenGaze and the Gazepoint open API.
 
 ## License
-Gazepoint2Json - time-synchronously integrates eye tracker data collected from a Gazepoint GP3 with an experimentation platform API, such as the Cybertrust phishing research platform.
+Gazepoint2Json - coverts and time-synchronously integrates eye tracker data collected from a Gazepoint GP3 with a JSON-based experimentation platform API, such as the Cybertrust phishing research platform.
+
 Copyright (C) 2017 Dr. Matthew L. Hale, unless otherwise indicated.
 
 This program is free software: you can redistribute it and/or modify
