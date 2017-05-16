@@ -1,15 +1,23 @@
 # Cybertrust-gaze
 This project time-synchronously integrates eye tracker data collected from a Gazepoint GP3 with an experimentation platform API, such as the Cybertrust phishing research platform.
 
-## Installation
-Requires:
+## Hardware Requirements
+* Gazepoint GP3 HD (https://www.gazept.com/product-category/gp3-hd/)
+* Gazepoint Control v3.5.0 + 
 
+## Software Requirements
 * Python 2, >= 2.7.9 See: https://www.python.org/downloads
 * python pip (https://pypi.python.org/pypi/pip)
 * lxml (https://pypi.python.org/pypi/lxml/3.4.4)
 * requests (http://docs.python-requests.org/en/master/)
 * PyOpenGaze (https://github.com/esdalmaijer/PyOpenGaze)
 
+## Installation
+### Hardware
+Follow the GP3 setup guide, connecting the data USB port to a USB3 port.
+Install the Gazepoint remote and control server using the Gasepoint Installer located here (https://www.gazept.com/downloads/), using valid access credentials provided with purchase of the GP3.
+
+### Software
 First install python and pip. Then:
 
 ```
