@@ -1,0 +1,47 @@
+OPENGAZE PYTHON DEBUG LOG 2017-05-23_02-13-20
+02:13:20.890000: Connecting to 127.0.0.1 (4242)...
+02:13:20.930000: Successfully connected!
+02:13:20.930000: Opening new logfile 'default.tsv'
+02:13:20.935000: Starting the logging thread.
+02:13:20.935000: Logging Thread started.
+02:13:20.935000: Starting the incoming thread.
+02:13:20.935000: Incoming Thread started.
+02:13:20.936000: Starting the outgoing thread.
+02:13:20.936000: Outgoing Thread started.
+02:13:21.436000: Outqueue add: '<SET ID="ENABLE_SEND_COUNTER" STATE="1" />\r\n'
+02:13:21.437000: Outgoing: '<SET ID="ENABLE_SEND_COUNTER" STATE="1" />\r\n'
+02:13:21.936000: socket recv timeout
+02:13:21.938000: Outqueue sent: '<SET ID="ENABLE_SEND_COUNTER" STATE="1" />\r\n'
+02:13:21.941000: Raw instring: '<ACK ID="ENABLE_SEND_COUNTER" STATE="1" />\r\n'
+02:13:21.941000: Incoming: '<ACK ID="ENABLE_SEND_COUNTER" STATE="1" />'
+02:13:21.943000: Outqueue acknowledged: '<SET ID="ENABLE_SEND_COUNTER" STATE="1" />\r\n'
+02:13:21.944000: Outqueue add: '<SET ID="ENABLE_SEND_CURSOR" STATE="1" />\r\n'
+02:13:21.944000: Outgoing: '<SET ID="ENABLE_SEND_CURSOR" STATE="1" />\r\n'
+02:13:22.942000: socket recv timeout
+02:13:22.944000: Outqueue sent: '<SET ID="ENABLE_SEND_CURSOR" STATE="1" />\r\n'
+02:13:22.945000: Raw instring: '<ACK ID="ENABLE_SEND_CURSOR" STATE="1" />\r\n'
+02:13:22.945000: Incoming: '<ACK ID="ENABLE_SEND_CURSOR" STATE="1" />'
+02:13:22.947000: Outqueue acknowledged: '<SET ID="ENABLE_SEND_CURSOR" STATE="1" />\r\n'
+02:13:22.949000: Outqueue add: '<SET ID="ENABLE_SEND_EYE_LEFT" STATE="1" />\r\n'
+02:13:22.949000: Outgoing: '<SET ID="ENABLE_SEND_EYE_LEFT" STATE="1" />\r\n'
+02:13:23.946000: socket recv timeout
+02:13:23.947000: Outqueue sent: '<SET ID="ENABLE_SEND_EYE_LEFT" STATE="1" />\r\n'
+02:13:23.950000: Raw instring: '<ACK ID="ENABLE_SEND_EYE_LEFT" STATE="1" />\r\n'
+02:13:23.950000: Incoming: '<ACK ID="ENABLE_SEND_EYE_LEFT" STATE="1" />'
+02:13:23.952000: Outqueue acknowledged: '<SET ID="ENABLE_SEND_EYE_LEFT" STATE="1" />\r\n'
+02:13:23.954000: Outqueue add: '<SET ID="ENABLE_SEND_EYE_RIGHT" STATE="1" />\r\n'
+02:13:23.954000: Outgoing: '<SET ID="ENABLE_SEND_EYE_RIGHT" STATE="1" />\r\n'
+02:13:24.951000: socket recv timeout
+02:13:24.952000: Outqueue sent: '<SET ID="ENABLE_SEND_EYE_RIGHT" STATE="1" />\r\n'
+02:13:24.955000: Raw instring: '<ACK ID="ENABLE_SEND_EYE_RIGHT" STATE="1" />\r\n'
+02:13:24.955000: Incoming: '<ACK ID="ENABLE_SEND_EYE_RIGHT" STATE="1" />'
+02:13:24.957000: Outqueue acknowledged: '<SET ID="ENABLE_SEND_EYE_RIGHT" STATE="1" />\r\n'
+02:13:24.959000: Outqueue add: '<SET ID="ENABLE_SEND_POG_BEST" STATE="1" />\r\n'
+02:13:24.959000: Outgoing: '<SET ID="ENABLE_SEND_POG_BEST" STATE="1" />\r\n'
+02:13:25.956000: socket recv timeout
+02:13:25.958000: Outqueue sent: '<SET ID="ENABLE_SEND_POG_BEST" STATE="1" />\r\n'
+02:13:25.960000: Raw instring: '<ACK ID="ENABLE_SEND_POG_BEST" STATE="1" />\r\n'
+02:13:25.960000: Incoming: '<ACK ID="ENABLE_SEND_POG_BEST" STATE="1" />'
+02:13:25.961000: Outqueue acknowledged: '<SET ID="ENABLE_SEND_POG_BEST" STATE="1" />\r\n'
+02:13:25.963000: Outqueue add: '<SET ID="ENABLE_SEND_POG_FIX" STATE="1" />\r\n'
+02:13:25.963000: Outgoing: '<SET ID="ENABLE_SEND_POG_FIX" STATE="1" />\r\n'

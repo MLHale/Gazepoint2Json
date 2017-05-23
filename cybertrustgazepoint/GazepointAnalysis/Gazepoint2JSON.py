@@ -27,11 +27,13 @@ from opengaze import OpenGazeTracker
 
 class Gazepoint2JSON(OpenGazeTracker):
     def __init__(self, ip='127.0.0.1', port=4242, logfile='default.tsv', \
-		debug=False, api_user='', api_endpoint='http://localhost:8000/eyetrackerevents'):
+		debug=False, api_user='', api_password='', api_endpoint='http://localhost:8000/api/'):
         OpenGazeTracker.__init__(self, ip, port, logfile, debug)
         self._api_user = api_user
         self._api_endpoint = api_endpoint
-
+        r = requests.post(self._api_endpoint+'session/', {'username':api_user,'password':api_password})
+        print r.json()
+        self._cookies = r.cookies
     # Accepts a sample as a list of keys and returns a JSON object
     def sampleToJSON(self, sample):
         # append apiuser variable
@@ -55,11 +57,11 @@ class Gazepoint2JSON(OpenGazeTracker):
     # Issue POST request with given data, to the specified API
     def POSTSample(self, json_obj):
         if self._debug:
-            print 'Sending Request to' + self._api_endpoint  + '\n'
-            print json_obj
+            print 'Sending Request to: ' + self._api_endpoint  + '\n'
+            # print json_obj
             print '\n'
         try:
-            r = requests.post(self._api_endpoint, json_obj)
-            print r
+            r = requests.post(self._api_endpoint+'eyetrackerevents', json_obj, cookies=self._cookies)
+            print r.text
         except Exception as e:
             print e
