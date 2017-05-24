@@ -57,11 +57,11 @@ class Gazepoint2JSON(OpenGazeTracker):
     # Issue POST request with given data, to the specified API
     def POSTSample(self, json_obj):
         if self._debug:
-            print 'Sending Request to: ' + self._api_endpoint  + '\n'
+            print 'Sending Request to: ' + self._api_endpoint+'eyetrackerevents/eyetrackerintegration'  + '\n'
             # print json_obj
-            print '\n'
         try:
-            r = requests.post(self._api_endpoint+'eyetrackerevents', json_obj, cookies=self._cookies)
+            r = requests.post(self._api_endpoint+'eyetrackerevents/eyetrackerintegration', data=json_obj, cookies=self._cookies, headers={'Content-Type': 'application/json'})
             print r.text
+            print '---------------------------------------------\n'
         except Exception as e:
             print e

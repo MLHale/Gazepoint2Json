@@ -29,8 +29,9 @@ import threading
 
 
 def sendData(username,password,api_endpoint):
+	print 'Capture thread started'
 	t = threading.currentThread()
-	tracker = Gazepoint2JSON(debug=True, api_endpoint=api_endpoint, api_user=username, api_password=password)
+	tracker = Gazepoint2JSON(api_endpoint=api_endpoint, api_user=username, api_password=password)
 
 	# Calibrate the tracker.
 	# tracker.calibrate()
@@ -50,6 +51,10 @@ def sendData(username,password,api_endpoint):
 	tracker.log("STOP=%d" % (round(time.time()*1000)))
 	tracker.stop_recording()
 	tracker.close()
+
+def startGazepoint():
+	try: os.system('\"C:\\Program Files (x86)\\Gazepoint\\Gazepoint\\bin\\Gazepoint.exe\"')
+	except: print 'Error starting Gazepoint'
 
 class Session(APIView):
 	permission_classes = (AllowAny,)
@@ -79,9 +84,15 @@ class Session(APIView):
 				session = EyeTrackerSession(username=username,password=password,cybertrustpath=cybertrustpath)
 				session.save()
 
+			#launch gazepoint remote xml server
+			t1 = threading.Thread(target=startGazepoint)
+			t1.start()
+			print 'Gazepoint controller starting'
+			time.sleep(5) # give it some time to start
 			#start gazepoint capture
-			t = threading.Thread(target=sendData, args=(username,password,cybertrustpath))
-			t.start()
+			t2 = threading.Thread(target=sendData, args=(username,password,cybertrustpath))
+			t2.start()
+			print t1
 			# time.sleep(5)
 			# t.do_run = False
 			# t.join()

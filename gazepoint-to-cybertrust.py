@@ -4,7 +4,7 @@ import time
 from Gazepoint2JSON import Gazepoint2JSON
 
 debug = True
-tracker = Gazepoint2JSON(debug=debug)
+tracker = Gazepoint2JSON(debug=debug, api_endpoint='http://localhost:8000/api/eyetrackerevents', api_user='1')
 
 # Calibrate the tracker.
 # tracker.calibrate()
