@@ -1,4 +1,6 @@
 # Gazepoint2Json
+> !! Not maintained at all. Use https://github.com/MLHale/gazepoint-websockets instead !!
+
 This project coverts and time-synchronously integrates eye tracker data collected from a Gazepoint GP3 with a JSON-based experimentation platform API, such as the Cybertrust phishing research platform.
 
 ## Hardware Requirements
